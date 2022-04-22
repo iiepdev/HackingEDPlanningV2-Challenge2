@@ -25,7 +25,7 @@ A point layer containing each school in Bangladesh, along with other attributes,
 
 ## Population estimates
 
-Granular population estimates are key to determine not only which schools will be affected first, but who will be touched where and when by the rise in sea levels. The gridded population estimates here have been prepared using [WorldPop](https://www.worldpop.org/geodata/summary?id=16810) unconstrained UN-adjusted[^1] data for 2020, following the methodology outlined [here](https://github.com/iiepdev/Spatialized-school-age-populations) (Gagnon & Vargas Mesa, 2021). The file is both in [GeoTIFF]() and in [polygon]() format. 
+Granular population estimates are key to determine not only which schools will be affected first, but who will be touched where and when by the rise in sea levels. The gridded population estimates here have been prepared using [WorldPop](https://www.worldpop.org/geodata/summary?id=16810) unconstrained UN-adjusted data for 2019, following the methodology outlined [here](https://github.com/iiepdev/Spatialized-school-age-populations) (Gagnon & Vargas Mesa, 2021). The file is both in GeoTIFF ([Pre-primary](https://box.iiep.unesco.org/s/P4DD8WidZtS2Cr2), [Primary](https://box.iiep.unesco.org/s/3We94pkjywjkTJS), and [Secondary](https://box.iiep.unesco.org/s/eR4jcepHCEno4Qs)) and in [polygon](https://box.iiep.unesco.org/s/dnsswDPRdXsWCap) format (which contains single years of age and reconstructed school age populations as attributes)[^1]. 
 
 ## Flooded areas
 
@@ -37,4 +37,4 @@ Different image collections exist within GEE to obtain flooding patterns. Below 
 |Global Flood Database v1|Daily|2000-2018|30 meters|[Global Flood Database](https://developers.google.com/earth-engine/datasets/catalog/GLOBAL_FLOOD_DB_MODIS_EVENTS_V1)|
 |JRC Monthly Water History, v1.3|Monthly|1984-2020|30 meters|[JRC Monthly Water History](https://developers.google.cn/earth-engine/datasets/catalog/JRC_GSW1_3_MonthlyHistory)|
 
-[^1]: While the information downloaded from WorldPop is unconstrained data, it was adjusted to UN estimates using the information produced by the [UN Population Division](https://population.un.org/wpp/Download/Standard/Interpolated/), particularly the [Annual Population by Age - Both Sexes](https://population.un.org/wpp/Download/Files/1_Indicators%20(Standard)/EXCEL_FILES/5_Interpolated/WPP2019_INT_F03_1_POPULATION_BY_AGE_ANNUAL_BOTH_SEXES.xlsx). This applies only for the vector file.
+[^1]: Note that the information in GeoTIFF format comes with a resolution of 100m by 100m, while the vector format comes in a 1Km by 1Km grid.
