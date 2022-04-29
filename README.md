@@ -40,7 +40,7 @@ way["amenity"="school"]({{bbox}}); 			//filter school on the mapview
 out center;									//transform all as center point
 ```
 
-[Access to this tool](https://overpass-turbo.eu/s/1i3e) then place the map in the region of your interest and then **<button>execute</button>** the formula and  **<button>extract</button>** to download a file usable by GIS software (`.geojson` `.gpx` or `.kml`).
+[Access this tool](https://overpass-turbo.eu/s/1i3e) then place the map in the region of your interest and then **<button>execute</button>** the formula and  **<button>extract</button>** to download a file usable by GIS software (`.geojson` `.gpx` or `.kml`).
 
 ## Population estimates
 
@@ -60,7 +60,7 @@ Different image collections exist within GEE to obtain flooding patterns. Below 
 
 
 
-# How to use this github repository ? 
+# How to use this GitHub repository ? 
 
 If you have never used github repository you can download the content of this repository by clicking on the button **Code** and then **download zip**. If you want you can start to use github by forking this project as a base for your project and share your work on Github. 
 
