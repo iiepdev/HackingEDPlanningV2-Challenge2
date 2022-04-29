@@ -23,7 +23,24 @@ In the interest of time, the GeoTIFF for Bangladesh has already been downloaded 
 
 ## School location 
 
+### School in Bangladesh
+
 A point layer containing each school in Bangladesh, along with other attributes, can be downloaded [here](https://data.humdata.org/dataset/bangladesh-education-facilities-by-lged).
+
+### OpenStreetMap school location
+
+As an alternative to get school localisation you can use OpenStreetMap data. OpenStreetMap is a contributive map that could be explained as the wikipedia for cartography. Everybody could contribute to make the map better and add new things. [Get more information here.](https://wiki.openstreetmap.org/wiki/About_OpenStreetMap)
+
+School in OpenStreetMap are described with at least the tag `"amenity"="school"` and more information could be added as the name, the website or the capacity. A wiki article give you more information [here](https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool).
+
+To dowload only the school in OpenStreetMap you can use a service called Overpass turbo with this formula : 
+
+```
+way["amenity"="school"]({{bbox}}); 			//filter school on the mapview
+out center;									//transform all as center point
+```
+
+[Access to this tool](https://overpass-turbo.eu/s/1i3e) then place the map in the region of your interest and then **<button>execute</button>** the formula and  **<button>extract</button>** to download a file usable by GIS software (`.geojson` `.gpx` or `.kml`).
 
 ## Population estimates
 
@@ -40,3 +57,12 @@ Different image collections exist within GEE to obtain flooding patterns. Below 
 |JRC Monthly Water History, v1.3|Monthly|1984-2020|30 meters|[JRC Monthly Water History](https://developers.google.cn/earth-engine/datasets/catalog/JRC_GSW1_3_MonthlyHistory)|
 
 [^1]: Note that the information in GeoTIFF format comes with a resolution of 100m by 100m, while the vector format comes in a 1Km by 1Km grid.
+
+
+
+# How to use this github repository ? 
+
+If you have never used github repository you can download the content of this repository by clicking on the button **Code** and then **download zip**. If you want you can start to use github by forking this project as a base for your project and share your work on Github. 
+
+![image](https://user-images.githubusercontent.com/20289907/165938434-c12486a7-b9ae-43e8-81f2-0e15e279bfd3.png)
+
