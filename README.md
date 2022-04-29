@@ -3,6 +3,8 @@
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=aTGlGLpbQ7o" target="_blank"><img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F237802049%2F336870561013%2F1%2Foriginal.20220228-102209?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C54%2C1200%2C600&s=92cc71cae0ff03ed75357a1f0aef9819" 
 alt="Introductory video" width="720" height="360" border="10" /></a>
 
+Note: By accessing this repository and the corresponding files, you agree to a non-disclosure agreement. To get a copy, please write to development@iiep.unesco.org
+
 🧐 Climate  change-related sea level rise is an increasing threat to livelihoods in  coastal regions around the world, with the education system not being  an exception. Ministries of Education need a way of determining which schools will be under the sea level first, so that mitigation and adaptation plans can be set into place.
 
 🎯 The objective of the challenge is to create a methodology that uses Copernicus GLO-30 fine DEM to determine, based on a projected sea level rise, the areas that will be under the sea level for a given year, the schools that will be impacted, and, time permitting, the school-age population that will be affected. Participants joining this challenge are encouraged to use QGIS, although any FOSS is also welcomed.
