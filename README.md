@@ -3,6 +3,10 @@
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=aTGlGLpbQ7o" target="_blank"><img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F237802049%2F336870561013%2F1%2Foriginal.20220228-102209?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C54%2C1200%2C600&s=92cc71cae0ff03ed75357a1f0aef9819" 
 alt="Introductory video" width="720" height="360" border="10" /></a>
 
+🇫🇷 [Version française](#version-française)
+
+🇪🇸 [Versión en Español](#versi%C3%B3n-en-espa%C3%B1ol)
+
 Note: By accessing this repository and the corresponding files, you agree to a non-disclosure agreement. To get a copy, please write to development@iiep.unesco.org
 
 🧐 Climate  change-related sea level rise is an increasing threat to livelihoods in  coastal regions around the world, with the education system not being  an exception. Ministries of Education need a way of determining which schools will be under the sea level first, so that mitigation and adaptation plans can be set into place.
@@ -66,3 +70,60 @@ If you have never used github repository you can download the content of this re
 
 ![image](https://user-images.githubusercontent.com/20289907/165938434-c12486a7-b9ae-43e8-81f2-0e15e279bfd3.png)
 
+# Version française
+
+# Versión en Español
+
+Nota: Al acceder a este repositorio y a los archivos correspondientes, usted acepta un acuerdo de no divulgación. Para obtener una copia, escriba a development@iiep.unesco.org
+
+🧐 La subida del nivel del mar por efectos del cambio climático es una amenaza creciente para la subsistencia en las regiones costeras de todo el mundo, y los sistemas educativos no están exentos de este problema. Los ministerios de educación necesitan una forma de determinar qué escuelas se encontrarán primero bajo el nivel del mar, para poder definir planes de mitigación y adaptación.
+
+🎯 El objetivo del reto es crear una metodología que utilice el MDE fino GLO-30 de Copernicus para determinar, basándose en una proyección de la subida del nivel del mar, las zonas que estarán bajo el agua en un año determinado, las escuelas que se verán afectadas por esta crecida y, si el tiempo lo permite, la población en edad escolar que se verá afectada.
+
+Esta metodología permitiría a los ministerios de educación determinar qué escuelas hay que renovar en prioridad, dónde ubicar nuevas escuelas, y cómo identificar las comunidades que necesitarán servicios educativos adicionales a medida que suba el nivel del mar.
+
+⛑ Se recomienda que las personas que se unan a este reto utilicen QGIS, aunque cualquier software libre y de código abierto también es bienvenido.
+Datos
+
+# Modelo digital de elevación
+
+El Modelo Digital de Elevación GLO-30 de Copernicus es un Modelo Digital de Superficie (DSM) que representa la superficie de la Tierra, incluyendo edificios, infraestructuras y vegetación. Este MDS se deriva de un MDS editado denominado WorldDEM, en el que se ha incluido el aplanamiento de las masas de agua y el flujo constante de los ríos. Además, se ha aplicado la edición de las orillas y las costas, las características especiales como los aeropuertos y las estructuras del terreno inverosímiles. Se requiere una cuenta gratuita para [descargar los datos](https://portal.opentopography.org/raster?opentopoID=OTSDEM.032021.4326.3) de cualquier parte del mundo.
+
+En aras del tiempo, el GeoTIFF de Bangladesh ya se ha descargado [aquí](https://box.iiep.unesco.org/s/9ec4QpzcnK4Wtob).
+
+# Ubicación de la escuela
+
+## Escuela en Bangladesh
+
+[Aquí](https://data.humdata.org/dataset/bangladesh-education-facilities-by-lged) se puede descargar una capa de puntos que contiene cada escuela de Bangladesh, junto con otros atributos.
+
+## Ubicación de la escuela en OpenStreetMap
+Como alternativa para obtener la localización de la escuela puede utilizar los datos de OpenStreetMap. OpenStreetMap es un mapa colaborativo que podría explicarse como la Wikipedia de la cartografía. Todo el mundo puede contribuir a mejorar el mapa y añadir cosas nuevas. [Obtenga más información aquí](https://wiki.openstreetmap.org/wiki/About_OpenStreetMap).
+
+Las escuelas en OpenStreetMap se describen al menos con la etiqueta `"amenity"="school"` y se puede añadir más información como el nombre, el sitio web o la capacidad. Un artículo de la wiki ofrece más información [aquí](https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool).
+
+Para descargar sólo la escuela en OpenStreetMap puede utilizar un servicio llamado Overpass turbo con esta fórmula:
+
+```
+way["amenity"="school"]({{bbox}}); 			//Filtra los colegios en la vista actual
+out center;									// Transforma todos en el punto central 
+```
+
+[Acceda a esta](https://overpass-turbo.eu/s/1i3e) herramienta y coloque el mapa en la región de su interés y luego ejecute la fórmula y extraiga para descargar un archivo utilizable por el software SIG (`. geojson` . `gpx` o . `kml`).
+
+# Estimaciones de población
+
+Las estimaciones granulares de población son fundamentales para determinar no sólo qué escuelas se verán afectadas en primer lugar, sino también a quién se verá afectado, así como dónde y cuándo, al momento de la subida del nivel del mar. Las estimaciones de población cuadriculadas aquí se han preparado utilizando datos [WorldPop](https://www.worldpop.org/geodata/summary?id=16810) no restringidos ajustados a los parámetros de las Naciones Unidas para el año 2019, siguiendo la metodología descrita [aquí](https://github.com/iiepdev/Spatialized-school-age-populations) (Gagnon & Vargas Mesa, 2021). El archivo está tanto en GeoTIFF ([preescolar](https://box.iiep.unesco.org/s/P4DD8WidZtS2Cr2), [primaria](https://box.iiep.unesco.org/s/3We94pkjywjkTJS) y [secundaria](https://box.iiep.unesco.org/s/eR4jcepHCEno4Qs)) como en formato de [polígono](https://box.iiep.unesco.org/s/dnsswDPRdXsWCap) (que contiene como atributos las poblaciones de un solo año de edad y de edad escolar reconstruida)[^2].
+
+# Zonas inundadas
+
+Existen diferentes colecciones de imágenes dentro de GEE para obtener patrones de inundación. A continuación se presenta una lista no exhaustiva.
+
+|Nombre de la fuente de datos|Frecuencia|Periodo de tiempo|Resolución|Código|
+|:----|:----|:----|:----|:----|
+|Sentinel-1 SAR GRD|Diaria|2014-Present|10 metros|[Sentinel-1 SAR GRD](https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S1_GRD)|
+|Base de datos mundial sobre inundaciones v1|Diaria|2000-2018|30 metros|[Global Flood Database](https://developers.google.com/earth-engine/datasets/catalog/GLOBAL_FLOOD_DB_MODIS_EVENTS_V1)|
+|Historia mensual del agua del CCI, v1.3|Mensual|1984-2020|30 metros|[JRC Monthly Water History](https://developers.google.cn/earth-engine/datasets/catalog/JRC_GSW1_3_MonthlyHistory)|
+
+
+[^2]: Note que la información en formato GeoTIFF tiene una resolución de 100m por 100m, mientras que la versión vectorial tiene information de 1Km por 1Km.
