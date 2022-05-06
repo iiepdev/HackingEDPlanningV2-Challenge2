@@ -50,16 +50,6 @@ out center;									//transform all as center point
 
 Granular population estimates are key to determine not only which schools will be affected first, but who will be touched where and when by the rise in sea levels. The gridded population estimates here have been prepared using [WorldPop](https://www.worldpop.org/geodata/summary?id=16810) unconstrained UN-adjusted data for 2019, following the methodology outlined [here](https://github.com/iiepdev/Spatialized-school-age-populations) (Gagnon & Vargas Mesa, 2021). The file is both in GeoTIFF ([Pre-primary](https://box.iiep.unesco.org/s/P4DD8WidZtS2Cr2), [Primary](https://box.iiep.unesco.org/s/3We94pkjywjkTJS), and [Secondary](https://box.iiep.unesco.org/s/eR4jcepHCEno4Qs)) and in [polygon](https://box.iiep.unesco.org/s/dnsswDPRdXsWCap) format (which contains single years of age and reconstructed school age populations as attributes)[^1]. 
 
-## Flooded areas
-
-Different image collections exist within GEE to obtain flooding patterns. Below is a non-exhaustive list.
-
-|Name of the data source|Frequency|Time span|Resolution|Code|
-|:----|:----|:----|:----|:----|
-|Sentinel-1 SAR GRD|Daily|2014-Present|10 meters|[Sentinel-1 SAR GRD](https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S1_GRD)|
-|Global Flood Database v1|Daily|2000-2018|30 meters|[Global Flood Database](https://developers.google.com/earth-engine/datasets/catalog/GLOBAL_FLOOD_DB_MODIS_EVENTS_V1)|
-|JRC Monthly Water History, v1.3|Monthly|1984-2020|30 meters|[JRC Monthly Water History](https://developers.google.cn/earth-engine/datasets/catalog/JRC_GSW1_3_MonthlyHistory)|
-
 [^1]: Note that the information in GeoTIFF format comes with a resolution of 100m by 100m, while the vector format comes in a 1Km by 1Km grid.
 
 # How to use this GitHub repository ? 
@@ -113,16 +103,6 @@ out center;									//transformer tout en point central
 
 Les estimations granulaires de la population sont essentielles pour déterminer non seulement quelles écoles seront touchées en premier, mais aussi qui sera touché où et quand par l'élévation du niveau de la mer. Les estimations de population en grille présentées ici ont été préparées en utilisant [WorldPop](https://www.worldpop.org/geodata/summary?id=16810) données non contraintes ajustées par l'ONU pour 2019, en suivant la méthodologie décrite [ici](https://github.com/iiepdev/Spatialized-school-age-populations) (Gagnon & Vargas Mesa, 2021). Le fichier est à la fois en format GeoTIFF ([pré-primaire](https://box.iiep.unesco.org/s/P4DD8WidZtS2Cr2), [primaire](https://box.iiep.unesco.org/s/3We94pkjywjkTJS) et [secondaire](https://box.iiep.unesco.org/s/eR4jcepHCEno4Qs)) et en format [polygone](https://box.iiep.unesco.org/s/dnsswDPRdXsWCap) (qui contient comme attributs les années d'âge unique et les populations d'âge scolaire reconstruites)[^2].
 
-## Zones inondées
-
-Différentes collections d'images existent au sein de GEE pour obtenir des modèles d'inondation. En voici une liste non exhaustive.
-
-|Nom de la source de données|Fréquence|Période de temps|Résolution|Code|
-|:----|:----|:----|:----|:----|
-|Sentinel-1 SAR GRD|Quotidiennement|2014-présent|10 mètres|[Sentinel-1 SAR GRD](https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S1_GRD)|
-|GBase de données mondiale sur les inondations  v1|Quotidiennement|2000-2018|30 mètres|[Global Flood Database](https://developers.google.com/earth-engine/datasets/catalog/GLOBAL_FLOOD_DB_MODIS_EVENTS_V1)|
-|Historique mensuel de l'eau du CCR, v1.3|Mensuel|1984-2020|30 mètres|[JRC Monthly Water History](https://developers.google.cn/earth-engine/datasets/catalog/JRC_GSW1_3_MonthlyHistory)|
-
 # Comment utiliser ce dépôt GitHub ?
 
 Si vous n'avez jamais utilisé le dépôt GitHub, vous pouvez télécharger le contenu de ce dépôt en cliquant sur le bouton **Code** et ensuite **télécharger zip**. Si vous voulez, vous pouvez commencer à utiliser GitHub en forkant ce projet comme base pour votre projet et partager votre travail sur GitHub.
@@ -171,16 +151,6 @@ out center;									// Transforma todos en el punto central
 # Estimaciones de población
 
 Las estimaciones granulares de población son fundamentales para determinar no sólo qué escuelas se verán afectadas en primer lugar, sino también a quién se verá afectado, así como dónde y cuándo, al momento de la subida del nivel del mar. Las estimaciones de población cuadriculadas aquí se han preparado utilizando datos [WorldPop](https://www.worldpop.org/geodata/summary?id=16810) no restringidos ajustados a los parámetros de las Naciones Unidas para el año 2019, siguiendo la metodología descrita [aquí](https://github.com/iiepdev/Spatialized-school-age-populations) (Gagnon & Vargas Mesa, 2021). El archivo está tanto en GeoTIFF ([preescolar](https://box.iiep.unesco.org/s/P4DD8WidZtS2Cr2), [primaria](https://box.iiep.unesco.org/s/3We94pkjywjkTJS) y [secundaria](https://box.iiep.unesco.org/s/eR4jcepHCEno4Qs)) como en formato de [polígono](https://box.iiep.unesco.org/s/dnsswDPRdXsWCap) (que contiene como atributos las poblaciones de un solo año de edad y de edad escolar reconstruida)[^3].
-
-# Zonas inundadas
-
-Existen diferentes colecciones de imágenes dentro de GEE para obtener patrones de inundación. A continuación se presenta una lista no exhaustiva.
-
-|Nombre de la fuente de datos|Frecuencia|Periodo de tiempo|Resolución|Código|
-|:----|:----|:----|:----|:----|
-|Sentinel-1 SAR GRD|Diaria|2014-Presente|10 metros|[Sentinel-1 SAR GRD](https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S1_GRD)|
-|Base de datos mundial sobre inundaciones v1|Diaria|2000-2018|30 metros|[Global Flood Database](https://developers.google.com/earth-engine/datasets/catalog/GLOBAL_FLOOD_DB_MODIS_EVENTS_V1)|
-|Historia mensual del agua del CCI, v1.3|Mensual|1984-2020|30 metros|[JRC Monthly Water History](https://developers.google.cn/earth-engine/datasets/catalog/JRC_GSW1_3_MonthlyHistory)|
 
 # ¿Cómo utilizar este repositorio de GitHub?
 
