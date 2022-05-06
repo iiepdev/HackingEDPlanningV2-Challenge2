@@ -125,5 +125,10 @@ Existen diferentes colecciones de imágenes dentro de GEE para obtener patrones 
 |Base de datos mundial sobre inundaciones v1|Diaria|2000-2018|30 metros|[Global Flood Database](https://developers.google.com/earth-engine/datasets/catalog/GLOBAL_FLOOD_DB_MODIS_EVENTS_V1)|
 |Historia mensual del agua del CCI, v1.3|Mensual|1984-2020|30 metros|[JRC Monthly Water History](https://developers.google.cn/earth-engine/datasets/catalog/JRC_GSW1_3_MonthlyHistory)|
 
+# ¿Cómo utilizar este repositorio de GitHub?
+
+Si nunca ha utilizado el repositorio de GitHub, puede descargar el contenido de este repositorio haciendo clic en el botón Código y luego descargar el zip. Si así lo desea, puede empezar a usar GitHub bifurcando este proyecto como base para su proyecto y compartir su trabajo en GitHub.
+
+![image](https://user-images.githubusercontent.com/20289907/165938434-c12486a7-b9ae-43e8-81f2-0e15e279bfd3.png)
 
 [^2]: Note que la información en formato GeoTIFF tiene una resolución de 100m por 100m, mientras que la versión vectorial tiene information de 1Km por 1Km.
